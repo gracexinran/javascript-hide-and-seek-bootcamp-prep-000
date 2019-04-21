@@ -38,7 +38,3 @@ function deepestChild() {
 }
 
 
-  return list[list.length-1];
-
-
-}
