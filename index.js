@@ -17,16 +17,26 @@ for (let i = 0; i < lis.length; i++) {
 }
 
 function deepestChild() {
-    // console.log(document.getElementsByTagName('grand-bode'))
-var list =document.getElementsByTagName('div')
-  // var list = document.querySelectorAll('div#grand-bode');
-  // var i;
-    console.log("!!!!!!!!"+list.length)
-  for(var i=0; i<list.length; i++){
-console.log("!!!!!!!!"+list[i].getElementById('grand-bode'))
-  var subList=list[0].getElementsByTagName('grand-bode')
+// var list =document.querySelectorAll('div#grand-node')
+//   // var list = document.querySelectorAll('div#grand-bode');
+//   // var i;
+// 
+//   while(list.length>0){
+// 
+//     var sublist = list[0].querySelectorAll('div#grand-node')
+//     console.log(sublist)
+//     if (sublist.length==0){
+//       console.log("!!"+list[0].innerHTML);
+//       return list[0]
+//     }
+  var grandNode = document.querySelector('#grand-node');
+  var deepestNode = grandNode.children[0];
+  for (var i = 0; !deepestNode.children[i]; i) {
+    deepestNode = deepestNode.children[0]
+  }
+  return deepestNode;
+}
 
-  };
 
   return list[list.length-1];
 
